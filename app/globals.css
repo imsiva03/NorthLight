@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --bg: #f4f6fb; --fg: #12163a; --muted: #565c85; --card: #ffffff; --line: #dde1f0; }
+.dark { --bg: #0c0f26; --fg: #eef0ff; --muted: #a0a6d2; --card: #151a3d; --line: #262c5e; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+body { background: var(--bg); color: var(--fg); }
+
+:focus-visible { outline: 3px solid #3b4bff; outline-offset: 3px; border-radius: 4px; }
+
+/* One orchestrated moment: the hero headline lines rise in sequence on load. */
+@keyframes rise { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: none; } }
+.rise { animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: calc(var(--i, 0) * 120ms); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .rise { animation: none; }
+  * { transition-duration: 0.01ms !important; }
+}
