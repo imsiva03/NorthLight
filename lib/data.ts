@@ -11,6 +11,7 @@ export const services: Service[] = [
 ];
 
 export const projects: Project[] = [
+  
   { title: "Harbor Coffee Roasters", category: "Branding", image: "/work/harbor.svg", alt: "Abstract coffee-inspired brand artwork" },
   { title: "Lumen Banking App", category: "UI/UX", image: "/work/lumen.svg", alt: "Abstract mobile banking interface artwork" },
   { title: "Tidewell Furniture", category: "Web", image: "/work/tidewell.svg", alt: "Abstract furniture storefront artwork" },
