@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning className={`${display.variable} ${body.variable}`}>
       <head><script dangerouslySetInnerHTML={{ __html: themeScript }} /></head>
-      <body className="font-sans antialiased">{children}</body>
+      <body className=" font-sans antialiased">{children}</body>
     </html>
   );
 }
